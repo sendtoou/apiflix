@@ -1,6 +1,9 @@
 const Serie = require('../models/serie.model')
 
 module.exports = {
+  bodyView: (req, res, next) => {
+    console.log(req.body)
+  },
   allSerie: async(req, res, next) => {
     try {
       const series = await Serie.find({})

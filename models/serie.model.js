@@ -49,10 +49,10 @@ const serieSchema = new Schema({
   synopsis: String,
   episodes: [{
     _id:false,
-    episodeNumber: String,
-    episodeTitle: String,
-    episodeSynopsis: String,
-    episodeLink: String
+    chapter: String,
+    epTitle: String,
+    epSynopsis: String,
+    epLink: String
   }],
   rated: String,
   programTime: Number,
@@ -84,8 +84,8 @@ module.exports = Serie
 	"cast":[{"lang":"th","name":["หลิวเต๋อหัว","โจวชิงฉือ"]},{"lang":"en","name":["Andy Lue","Stephen Joe"]}],
 	"creators":[{"lang":"th","name":"โจวชิกชิก"},{"lang":"en","name":"Chi Joe"}],
 	"episodes":[
-		{"episodeNumber":"1",
-		"episodeTitle":"THE Primal of arching hero",
+		{"chapter":"1",
+		"epTitle":"THE Primal of arching hero",
 		"episodeSynopsis":"นักธนูยุคโบราณ ตอนเด็ก",
 		"episodeLink":"96.30.124.324/1kfritovfmv1/1dfldfkdlf1"},
 		{"episodeNumber":"2",

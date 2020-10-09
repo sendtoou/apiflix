@@ -112,7 +112,7 @@ let genRefreshTokenExpiryTime = () => {
   let secondsUntilExpire = ((daysUntilExpire * 24) * 60) * 60;
   return ((Date.now() / 1000) + secondsUntilExpire);
  
-  // let secondsUntilExpire = 50 // 50 second
+  // let secondsUntilExpire = 600 // 10 min
   // return ((Date.now() / 1000) + secondsUntilExpire);
 }
 

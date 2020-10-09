@@ -84,9 +84,9 @@ module.exports = {
       const newUser = new User(req.body)
       await newUser.save()
       const refreshToken = await newUser.createSessionToken() //refreshToken returned.
-      console.log('refreshToken:', refreshToken)
+      // console.log('refreshToken:', refreshToken)
       const token = await newUser.genAccessToken()
-      console.log('accessToken:', token)
+      // console.log('accessToken:', token)
       //response with accesstoken also accesstoken and refreshtoken in header
       res
       .header('x-access-token', token)
@@ -102,7 +102,10 @@ module.exports = {
       console.log('req.body', req.body)
       // const user =  await User.findOne({ 'local.email': email }) 
       const user =  await User.findByCredentials(email, password)
-      if (!user) { return res.status(403).json({ resCode: '1000', resMessage: 'credentails not match'}) }
+      // console.log('find user:',user)
+      if (!user) { 
+        return res.status(403).json({ resCode: '1000', resMessage: 'credentails not match'}) 
+      }
       const refreshToken = await user.createSessionToken() //refreshToken returned.
       const token = await user.genAccessToken()
       res

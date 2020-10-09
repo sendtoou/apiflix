@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const serieController = require('../controllers/serie.controller')
+const { bodyView } = require('../controllers/serie.controller');
 
 router.route('/serie')
 .get(serieController.allSerie)
-.post(serieController.createSerie)
+.post(bodyView, serieController.createSerie)
 
 // router.route('/:userId/packages')
 // .get(userController.getUserPackages)
