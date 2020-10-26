@@ -36,6 +36,7 @@ app.use('/api', require('./routes/auth'))
 app.use('/api', require('./routes/user'))
 app.use('/api', require('./routes/tab'))
 app.use('/api', require('./routes/serie'))
+app.use('/api', require('./routes/celeb'))
 
 /* CATCH ERROR 4O4 */
 app.use((req, res, next) => {
