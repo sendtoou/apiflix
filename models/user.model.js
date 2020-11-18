@@ -42,6 +42,13 @@ const userSchema = new Schema({
 });
 
 
+
+// role: {
+//   type: String,
+//   enum: ['trainer', 'client', 'admin'],
+//   default: 'client'
+// },
+
 // module.exports = mongoose.model('user', new mongoose.Schema({
 //   username: { type: String, required: true },
 //   password: { type: String, required: true },

@@ -66,7 +66,11 @@ const serieSchema = new Schema({
     lang: String,
     name: [String]
   }],
-  genres:[String],
+  //genres:[String],
+  genres: [{
+    type: Schema.Types.ObjectId,
+    ref:'genre'
+  }],
   tab: [{
     type: Schema.Types.ObjectId,
     ref:'tab'

@@ -3,7 +3,7 @@ const Celeb = require('../models/celeb.model')
 module.exports = {
   getAll: async(req, res, next) => {
     try {
-      const celebs = await Celeb.find({})
+      const celebs = await Celeb.find({}).populate('filmography')
       res.status(200).json(celebs)
     } catch(err) {
       next(err)
